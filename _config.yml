@@ -1,0 +1,5 @@
+title: Clarry 24
+description: A personal site by Clarry24
+theme: minima
+plugins:
+  - jekyll-feed
