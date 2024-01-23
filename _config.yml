@@ -1,5 +1,3 @@
-title: Clarry 24
-description: A personal site by Clarry24
-theme: minima
-plugins:
-  - jekyll-feed
+theme: jekyll-theme-minimal
+title: Theo's HomePage
+description: Bookmark this to keep an eye on my project updates!
