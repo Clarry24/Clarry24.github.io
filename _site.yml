@@ -1,0 +1,20 @@
+name: "Clarry's Website"
+title: "Hello, world!"
+theme: cosmo
+navbar:
+  title: "John Doe's Website"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+    - text: "Projects"
+      href: projects.html
+    - text: "Blog"
+      href: blog.html
+  right:
+    - icon: fa-twitter
+      href: ^1^
+    - icon: fa-github
+      href: ^2^
+output_dir: "_site"
