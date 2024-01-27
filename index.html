@@ -1,23 +1,79 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8"/>
-    <link rel="icon" href="/favicon.ico"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="theme-color" content="#000000"/>
-    <meta name="description" content="⚡ Explore Clarry's coding magic! Creative 🎨 & functional 🚀 web projects."/>
-    <link rel="apple-touch-icon" href="/logo192.png"/>
-    <link rel="manifest" href="/manifest.json"/>
-    <title>Claire Owino | Portfolio</title>
-    <script defer="defer" src="/static/js/main.52dfe8e5.js">
-      
-    </script>
-    <link href="/static/css/main.e1d3618d.css" rel="stylesheet">
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root">
-      
-    </div>
-  </body>
+<html>
+<head>
+<style>
+/* Style the countdown container */
+.countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  color: white;
+  background-color: black;
+}
+
+/* Style the countdown numbers */
+.countdown-number {
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+}
+
+/* Style the countdown labels */
+.countdown-label {
+  margin: 10px;
+  text-transform: uppercase;
+}
+</style>
+</head>
+<body>
+<!-- Display the countdown timer in an element -->
+<div class="countdown">
+  <div class="countdown-number" id="days"></div>
+  <div class="countdown-label">Days</div>
+  <div class="countdown-number" id="hours"></div>
+  <div class="countdown-label">Hours</div>
+  <div class="countdown-number" id="minutes"></div>
+  <div class="countdown-label">Minutes</div>
+  <div class="countdown-number" id="seconds"></div>
+  <div class="countdown-label">Seconds</div>
+</div>
+
+<script>
+// Set the launch date
+var launchDate = new Date("Feb 28, 2024 12:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the launch date
+  var distance = launchDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Display the result in the elements
+  document.getElementById("days").innerHTML = days;
+  document.getElementById("hours").innerHTML = hours;
+  document.getElementById("minutes").innerHTML = minutes;
+  document.getElementById("seconds").innerHTML = seconds;
+    
+  // If the count down is finished, display a message
+  if (distance < 0) {
+    clearInterval(x);
+    document.querySelector(".countdown").innerHTML = "Website Launched!";
+  }
+}, 1000);
+</script>
+</body>
 </html>
