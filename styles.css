@@ -44,6 +44,8 @@ body {
   border-radius: 5%;
   color: #fff; /* White text color */
   display: none; /* Initially hidden */
+  font-size: 36px;
+  align-items: center;
 }
 
 #yesImage {
