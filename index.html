@@ -42,6 +42,14 @@
       color: #fff; /* White text color */
     }
 
+    #shareButton {
+      background-color: #4caf50; /* Green button color */
+      border: 2px solid #2e8b57; /* Darker green border */
+      border-radius: 5%;
+      color: #fff; /* White text color */
+      display: none; /* Initially hidden */
+    }
+
     #yesImage {
       max-width: 100%;
     }
@@ -60,6 +68,10 @@
       background-color: #cc0000; /* Darker red on hover */
     }
 
+    #shareButton:hover {
+      background-color: #32cd32; /* Darker green on hover */
+    }
+
   </style>
 </head>
 <body>
@@ -73,6 +85,10 @@
       <button id="noButton" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
         No
       </button>
+      <!-- Share button added -->
+      <button id="shareButton" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+        Share
+      </button>
     </div>
     <img id="yesImage" src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif" style="display: none;" />
     <div id="yesText" class="text-4xl font-bold my-4" style="display: none;">Ok yay!!!</div>
@@ -81,9 +97,10 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const userName = prompt("Please enter your valentines' name:") || "Friend"; // Default to "Friend" if no name is provided
+    const userName = prompt("Please enter your valentine's name:") || "Friend"; // Default to "Friend" if no name is provided
     const noButton = document.getElementById('noButton');
     const yesButton = document.getElementById('yesButton');
+    const shareButton = document.getElementById('shareButton'); // New share button
     const valentineImage = document.getElementById('valentineImage');
     const yesImage = document.getElementById('yesImage');
     const yesText = document.getElementById('yesText');
@@ -137,6 +154,7 @@
       buttonsContainer.style.display = 'none';
       yesImage.style.display = 'block';
       yesText.style.display = 'block';
+      shareButton.style.display = 'block'; // Display share button on "Yes" page
     };
 
     noButton.addEventListener('click', handleNoClick);
@@ -144,10 +162,14 @@
       yesPressed = true;
       showYesContent();
     });
+
+    // Add functionality for the share button (e.g., open share options)
+    shareButton.addEventListener('click', () => {
+      alert("Share the love! 💖"); // Replace with actual share functionality
+    });
   });
 </script>
 
-<!-- Your existing HTML code -->
   </div>
 </body>
 </html>
