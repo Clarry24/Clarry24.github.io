@@ -1,16 +1,17 @@
+// script.js
 document.addEventListener('DOMContentLoaded', function () {
   const userName = prompt("Please enter your valentine's name:") || "Friend"; // Default to "Friend" if no name is provided
   const noButton = document.getElementById('noButton');
   const yesButton = document.getElementById('yesButton');
-  const shareButton = document.getElementById('shareButton'); // New share button
+  const shareButton = document.getElementById('shareButton');
   const valentineImage = document.getElementById('valentineImage');
   const yesImage = document.getElementById('yesImage');
   const yesText = document.getElementById('yesText');
   const valentineText = document.getElementById('valentineText');
-  const buttonsContainer = document.getElementById('buttonsContainer'); // Define buttonsContainer
+  const buttonsContainer = document.getElementById('buttonsContainer');
   let noCount = 0;
   let yesPressed = false;
-  let yesButtonSize = 20; // Initial size
+  let yesButtonSize = 20;
 
   // Update the text content dynamically with the user's name
   valentineText.textContent = `${userName}, will you be my Valentine?`;
@@ -18,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const handleNoClick = () => {
     noCount++;
     updateNoButtonText();
-    // Increase the size of the "Yes" button
     yesButtonSize = noCount * 20 + 16;
     yesButton.style.fontSize = yesButtonSize + 'px';
   };
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
     buttonsContainer.style.display = 'none';
     yesImage.style.display = 'block';
     yesText.style.display = 'block';
-    shareButton.style.display = 'block'; // Display share button on "Yes" page
+    shareButton.style.display = 'block';
   };
 
   noButton.addEventListener('click', handleNoClick);
@@ -65,8 +65,9 @@ document.addEventListener('DOMContentLoaded', function () {
     showYesContent();
   });
 
-  // Add functionality for the share button (e.g., open share options)
   shareButton.addEventListener('click', () => {
-    alert("Share the love! 💖"); // Replace with actual share functionality
+    const shareMessage = encodeURIComponent(`Check out this Valentine's page for you, ${userName}! 💖`);
+    const shareUrl = encodeURIComponent(window.location.href);
+    window.location.href = `whatsapp://send?text=${shareMessage} ${shareUrl}`;
   });
 });
