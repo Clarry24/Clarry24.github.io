@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   shareButton.addEventListener('click', () => {
-    const shareMessage = encodeURIComponent(`Check out this Valentine's page for you, ${userName}! 💖`);
+    const shareMessage = encodeURIComponent(`Do Not Press No in the following Valentine's page, ${userName}! 💖`);
     const shareUrl = encodeURIComponent(window.location.href);
     window.location.href = `whatsapp://send?text=${shareMessage} ${shareUrl}`;
   });
