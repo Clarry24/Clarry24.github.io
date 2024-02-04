@@ -71,12 +71,17 @@
         const yesImage = document.getElementById('yesImage');
         const yesText = document.getElementById('yesText');
         const valentineText = document.getElementById('valentineText');
+        const buttonsContainer = document.getElementById('buttonsContainer');
         let noCount = 0;
         let yesPressed = false;
+        let yesButtonSize = 20; // Initial size
 
         const handleNoClick = () => {
           noCount++;
           updateNoButtonText();
+          // Increase the size of the "Yes" button
+          yesButtonSize = noCount * 20 + 16;
+          yesButton.style.fontSize = yesButtonSize + 'px';
         };
 
         const getNoButtonText = () => {
