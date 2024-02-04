@@ -60,6 +60,8 @@ document.addEventListener('DOMContentLoaded', function () {
     shareButton.style.display = 'block';
   };
 
+  shareButton.style.display = 'none';
+
   noButton.addEventListener('click', handleNoClick);
   yesButton.addEventListener('click', () => {
     yesPressed = true;
