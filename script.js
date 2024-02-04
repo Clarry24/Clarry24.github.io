@@ -1,6 +1,7 @@
-// script.js
 document.addEventListener('DOMContentLoaded', function () {
-  const userName = prompt("Please enter your valentine's name:") || "Friend"; // Default to "Friend" if no name is provided
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const userName = urlParams.get('recipient') || prompt("Please enter your valentine's name:") || "Friend";
   const noButton = document.getElementById('noButton');
   const yesButton = document.getElementById('yesButton');
   const shareButton = document.getElementById('shareButton');
