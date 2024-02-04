@@ -51,6 +51,8 @@ document.addEventListener('DOMContentLoaded', function () {
     noButton.textContent = (noCount === 0) ? "No" : getNoButtonText();
   };
 
+  shareButton.style.display = 'none';
+
   const showYesContent = () => {
     valentineImage.style.display = 'none';
     valentineText.style.display = 'none';
@@ -59,8 +61,6 @@ document.addEventListener('DOMContentLoaded', function () {
     yesText.style.display = 'block';
     shareButton.style.display = 'block';
   };
-
-  shareButton.style.display = 'none';
 
   noButton.addEventListener('click', handleNoClick);
   yesButton.addEventListener('click', () => {
