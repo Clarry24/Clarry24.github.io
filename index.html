@@ -1,107 +1,86 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<style>
-/* Style the countdown container */
-.countdown {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Times New Roman', serif;
-  font-size: 24px;
-  color: black;
-  background-color: beige;
-}
-
-/* Style the countdown numbers */
-.countdown-number {
-  margin: 10px;
-  padding: 10px;
-  border: 2px solid brown;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  text-align: center;
-}
-
-/* Style the countdown labels */
-.countdown-label {
-  margin: 10px;
-  text-transform: uppercase;
-  font-style: italic;
-}
-
-.topic {
-  align-items: center;
-  color:brown;
-  background-color: beige;
-  text-align: center;
-  font-family: 'Times New Roman', serif;
-}
-
-.deco {
-  border-radius: 0 0 150px 0;
-  height: 300px;
-  width: 300px;
-  background-image: url("https://www.wikiart.org/en/leonardo-da-vinci/the-last-supper-1498");
-  background-size: cover;
-  background-position: center;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Page</title>
+  <style>
+    /* Add your styles here */
+  </style>
 </head>
 <body>
-  <style>
-  align-items: center;
-  background-color: beige;
-  text-align: center;
-  </style>
-<div class="topic">
-  <h1>Website under Development. Launching Soon.</h1>
-  <h3>Thank for visiting...</h3>
-</div>  
-<!-- Display the countdown timer in an element -->
-<div class="countdown">
-  <div class="countdown-number" id="days"></div>
-  <div class="countdown-label">Days</div>
-  <div class="countdown-number" id="hours"></div>
-  <div class="countdown-label">Hours</div>
-  <div class="countdown-number" id="minutes"></div>
-  <div class="countdown-label">Minutes</div>
-  <div class="countdown-number" id="seconds"></div>
-  <div class="countdown-label">Seconds</div>
-</div>
-<div class="deco"></div>
-<script >
-// Set the launch date
-var launchDate = new Date("Feb 28, 2024 12:00:00").getTime();
+  <div id="valentinePage" class="flex flex-col items-center justify-center h-screen -mt-16">
+    <img id="valentineImage" class="h-[200px]" src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif" />
+    <h1 id="valentineText" class="text-4xl my-4">Will you be my Valentine?</h1>
+    <div id="buttonsContainer">
+      <button id="yesButton" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-4">
+        Yes
+      </button>
+      <button id="noButton" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+        No
+      </button>
+    </div>
+    <img id="yesImage" src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif" style="display: none;" />
+    <div id="yesText" class="text-4xl font-bold my-4" style="display: none;">Ok yay!!!</div>
 
-// Update the count down every 1 second
-var x = setInterval(function() {
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const noButton = document.getElementById('noButton');
+        const yesButton = document.getElementById('yesButton');
+        const valentineImage = document.getElementById('valentineImage');
+        const yesImage = document.getElementById('yesImage');
+        const yesText = document.getElementById('yesText');
+        const valentineText = document.getElementById('valentineText');
+        let noCount = 0;
+        let yesPressed = false;
 
-  // Get today's date and time
-  var now = new Date().getTime();
-    
-  // Find the distance between now and the launch date
-  var distance = launchDate - now;
-    
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-  // Display the result in the elements
-  document.getElementById("days").innerHTML = days;
-  document.getElementById("hours").innerHTML = hours;
-  document.getElementById("minutes").innerHTML = minutes;
-  document.getElementById("seconds").innerHTML = seconds;
-    
-  // If the count down is finished, display a message
-  if (distance < 0) {
-    clearInterval(x);
-    document.querySelector(".countdown").innerHTML = "Website Launched!";
-  }
-}, 1000);
-</script>
-<script src="https://gist.github.com/tnarla/0c09a11fea366145ba684fe6ebf578c5.js"></script>
+        const handleNoClick = () => {
+          noCount++;
+          updateNoButtonText();
+        };
+
+        const getNoButtonText = () => {
+          const phrases = [
+            "No",
+            "Are you sure?",
+            "Really sure?",
+            "Think again!",
+            "Last chance!",
+            "Surely not?",
+            "You might regret this!",
+            "Give it another thought!",
+            "Are you absolutely certain?",
+            "This could be a mistake!",
+            "Have a heart!",
+            "Don't be so cold!",
+            "Change of heart?",
+            "Wouldn't you reconsider?",
+            "Is that your final answer?",
+            "You're breaking my heart ;(",
+          ];
+
+          return phrases[Math.min(noCount, phrases.length - 1)];
+        };
+
+        const updateNoButtonText = () => {
+          noButton.textContent = (noCount === 0) ? "No" : getNoButtonText();
+        };
+
+        const showYesContent = () => {
+          valentineImage.style.display = 'none';
+          valentineText.style.display = 'none';
+          buttonsContainer.style.display = 'none';
+          yesImage.style.display = 'block';
+          yesText.style.display = 'block';
+        };
+
+        noButton.addEventListener('click', handleNoClick);
+        yesButton.addEventListener('click', () => {
+          yesPressed = true;
+          showYesContent();
+        });
+      });
+    </script>
+  </div>
 </body>
 </html>
