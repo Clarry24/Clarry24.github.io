@@ -11,13 +11,13 @@ body {
 
 #valentineImage {
   max-width: 100%;
-  height: 300px;
+  height: 200px; /* Adjusted height for better appearance */
 }
 
 #valentineText {
-  color: #ff0066;
+  color: #ff0066; /* Deep pink text color */
   font-size: 36px;
-  font-family: 'Cursive', sans-serif;
+  font-family: 'Cursive', sans-serif; /* Valentine's themed font */
 }
 
 #buttonsContainer {
@@ -25,42 +25,37 @@ body {
 }
 
 .button {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 18px;
+  background-color: #ff99cc; /* Light pink button color */
+  border: 2px solid #ff0066; /* Deep pink border */
   border-radius: 5%;
-  cursor: pointer;
-  margin: 0 10px;
-  transition: background-color 0.3s;
+  color: #fff; /* White text color */
+  padding: 10px 20px; /* Adjusted padding for better button size */
+  font-size: 16px; /* Adjusted font size for better readability */
+  margin: 0 4px; /* Adjusted margin for better button spacing */
 }
 
-#yesButton,
-#noButton {
-  background-color: #ff99cc;
-  border: 2px solid #ff0066;
-  color: #fff;
+.button:hover {
+  background-color: #ff0066; /* Darker pink on hover */
 }
 
-#yesButton:hover,
-#noButton:hover {
-  background-color: #ff0066;
-}
-
-#yesButton {
-  margin-right: 10px;
-}
-
-#noButton {
-  margin-left: 10px;
+#yesText {
+  color: #ff0066; /* Deep pink text color */
+  font-size: 24px; /* Adjusted font size for better readability */
+  font-weight: bold;
+  display: none; /* Initially hidden */
 }
 
 #shareButton {
-  background-color: #ff66b2;
-  border: 2px solid #cc0052;
-  color: #fff;
+  background-color: #ff66b2; /* Lighter valentine pink button color */
+  border: 2px solid #cc0052; /* Darker valentine pink border */
+  border-radius: 5%;
+  color: #fff; /* White text color */
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
   margin-top: 20px;
 }
 
 #shareButton:hover {
-  background-color: #ff3385;
+  background-color: #ff3385; /* Darker valentine pink on hover */
 }
