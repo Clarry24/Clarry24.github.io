@@ -1,40 +1,146 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZKSTQ3HM1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-RZKSTQ3HM1');
-</script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Valentine's</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEHO Portfolio</title>
+    <link href="/styles.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
-<body>
-  <div id="valentinePage" class="flex flex-col items-center justify-center h-screen -mt-16">
-    <img id="valentineImage" class="h-[200px]" src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif" />
-    <h1 id="valentineText" class="text-4xl my-4">Hi, will you be my Valentine?</h1>
-    <div id="buttonsContainer">
-      <button id="yesButton" class="button">
-        Yes
-      </button>
-      <button id="noButton" class="button">
-        No
-      </button>
-    </div>
-    <img id="yesImage" src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif" style="display: none;" />
-    <div id="yesText" class="text-4xl font-bold my-4" style="display: none;">Ok yay!!!</div>
-    <!-- Share button added -->
-    <button id="shareButton" class="button">
-        Share
-    </button>
+<body class="bg-gray-100 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-blue-500 p-6">
+        <div class="container mx-auto">
+            <a href="#" class="text-xl font-bold text-white">SEHO Portfolio</a>
+    
+        </div>
 
-    <script src="script.js"></script>
-  </div>
+        
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-gray-900 py-20 px-4">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold text-white mb-6">HELLO</h1>
+            <p class="text-xl text-gray-300 mb-8">
+                We are SEHO a passionate Company dedicated to sustainable solutions. With our expertise our vision is to propel community development by empowering the target populations to enhance socio-economic development in its target areas   
+           <b>SEHO’S MISSION STATEMENT:
+
+To increase access to education facilities, promote safe environment and health by advocating for an empowered healthy community 
+</b>
+                
+            </p>                       
+            <div class="flex flex-wrap justify-center items-center">
+                <div class="flex items-center bg-blue-500 text-white px-6 py-3 rounded-full mb-4 mr-4 hover:bg-blue-700 transition duration-300">
+                    <i class="fas fa-comment mr-2"></i>
+                    <a href="sms:+254798837353?body=Hello%20Mr.%20Owino%2C%20I%20would%20like%20to%20get%20in%20touch%20regarding%20our%20next%20project.">Send Message</a>
+                </div>
+                <div class="flex items-center bg-blue-500 text-white px-6 py-3 rounded-full mb-4 mr-4 hover:bg-blue-700 transition duration-300">
+                    <i class="fas fa-phone mr-2"></i>
+                    <a href="tel:+254798837353">Call Now</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+    <!-- About Section -->
+    <section class="py-16 px-4 bg-gray-100">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-8 text-center">About US</h2>
+
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-200">
+                    <img src="/images/water (1).jpg" alt="Mr. Owino" class="w-full h-128 object-cover object-center">
+                </div>
+            
+                <div class="md:w-1/2 md:pl-8">
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Safe Environment and Health Organization (SEHO) was registered (Registration # OP.218/051/2008/0313/5315) as a national Non Governmental Organization in 2008.
+
+SEHO currently operates in three counties i.e. Kisumu, Homa Bay and Migori.  It works through partnerships with local implementing partners; civil society organizations (CSOs), Educationists/community mentors and    the County Government.
+
+The organization seeks to increase access to education, improved livelihood and good health in addition to sound environmental practices. 
+
+SEHO’s main target populations include;    youths in and out of school, Women groups and selected Friends of Environment to propagate for safe environment. 
+
+SEHO seeks to demonstrate an integrated community model that strives to draw from the local resources to ensure sustainability with an in-built community ownership and participation at all levels. It operates on the principle that the solid foundation to good health and safe environment is vested in the people who are adequately empowered to effectively participate on issues that affect their own lives with regard to health and environment. 
+
+                    </p
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="bg-gray-200 py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-8 text-center">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <img src="/images/water (1).jpg" alt="Project 1 Image" class="w-full h-64 object-cover object-center">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Boreholes</h3>
+                        <p class="text-gray-700 mb-4">Borehole Drilling .</p>
+                        <a href="#" class="text-blue-500 hover:underline">Read More</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <img src="/images/water (2).jpg" alt="Project 2 Image" class="w-full h-64 object-cover object-center">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Clean Water</h3>
+                        <p class="text-gray-700 mb-4">Water Purification.</p>
+                        <a href="#" class="text-blue-500 hover:underline">Read More</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <img src="/images/image 1.jpg" alt="Project 4 Image" class="w-full h-64 object-cover object-center">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Farming Projects</h3>
+                        <p class="text-gray-700 mb-4">Farmer managed natural regeneration (FMNR).</p>
+                        <a href="#" class="text-blue-500 hover:underline">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Contact Section -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-8 text-center">Get in Touch</h2>
+            <p class="text-gray-700 mb-4 text-center">Feel free to reach out to me through any of the following channels</p>
+            <div class="flex flex-wrap justify-center items-center">
+                <div class="flex items-center text-yellow-500 hover:text-yellow-700 mb-4 mr-4">
+                    <i class="fas fa-envelope mr-2"></i> <a href="mailto:safewashenvironment@gmail.com">Email</a>
+                </div>
+                <div class="flex items-center text-grey-400 hover:text-grey-600 mb-4 mr-4">
+                    <i class="fab fa-facebook mr-2"></i> <a href="#">Facebook</a>
+                </div>
+                <div class="flex items-center text-green-500 hover:text-green-700 mb-4 mr-4">
+                    <i class="fab fa-whatsapp mr-2"></i> <a href="https://wa.me/+254798837353">Whatsapp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6">
+        <div class="container mx-auto text-center">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-200">
+                    <img src="/images/logo.png" alt="Mr. Owino" class="w-full h-128 object-cover object-center">
+                </div>
+            <p>&copy; 2024 SEHO Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
+
+
+  
