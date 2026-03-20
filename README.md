@@ -17,6 +17,6 @@ Some of the skills and tools that I use are:
 
 ## Contact me
 
-If you want to get in touch with me, you can send me an email at clarry@gmail.com or follow me on [Twitter].
+If you want to get in touch with me, you can send me an email at claredorothy24@gmail.com or follow me on [Twitter].
 
 You can also check out some of my projects on [GitHub] or on my [blog].
